@@ -4,6 +4,7 @@ on:
     branches:
       - 'feature/**'
       - 'hotfix/**'    
+      - 'staging'    
   pull_request:
     branches: [ staging, production ]
 jobs:

@@ -1,9 +1,9 @@
-[![codecov](https://codecov.io/gh/SKF-LAM/lamconnect_proxy/branch/develop/graph/badge.svg?token=8GBL3NKUPK)](https://codecov.io/gh/SKF-LAM/lamconnect_proxy)
-[![Build and Push docker images to AWS ECR](https://github.com/SKF-LAM/lamconnect_proxy/actions/workflows/build_image_push_to_ecr_and_eks.yaml/badge.svg)](https://github.com/SKF-LAM/lamconnect_proxy/actions/workflows/build_image_push_to_ecr_and_eks.yaml)
+[![codecov](https://codecov.io/gh/dhdtech/dojo-dojo/branch/main/graph/badge.svg?token=DXMWQL1375)](https://codecov.io/gh/dhdtech/dojo-dojo)
+[![Build and Push docker images to AWS ECR](https://github.com/dhdtech/dojo-dojo/actions/workflows/build_image_push_to_ecr_and_eks.yaml/badge.svg)](https://github.com/dhdtech/dojo-dojo/actions/workflows/build_image_push_to_ecr_and_eks.yaml)
 [![Lynt, unit test and coverage](https://github.com/SKF-LAM/lamconnect_proxy/actions/workflows/lint_with_flake8_and_unit_test.yml/badge.svg)](https://github.com/SKF-LAM/lamconnect_proxy/actions/workflows/lint_with_flake8_and_unit_test.yml)
 
 
-# lamconnect_proxy
+# Dojo
 
 A simple flask full proxy that points to a new host for every single request.
 
