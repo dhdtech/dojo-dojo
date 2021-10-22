@@ -1,0 +1,37 @@
+# .coveragerc to control coverage.py
+[run]
+omit =
+    */venv/*
+    test_*.py
+    wsgi.py
+    application.py
+    */test/*
+    drm_appointment/models/*
+    drm_financial//models/*
+    drm_appointment/__init__.py
+    drm_financial/__init__.py
+    drm_appointment/controllers/security_controller_.py
+    drm_financial/controllers/security_controller_.py
+
+[report]
+precision = 3
+fail_under = 80
+sort = Cover
+# Regexes for lines to exclude from consideration
+exclude_lines =
+    # Have to re-enable the standard pragma
+    pragma: no cover
+
+    # Don't complain about missing debug-only code:
+    def __repr__
+    if self\.debug
+
+    # Don't complain if tests don't hit defensive assertion code:
+    raise AssertionError
+    raise NotImplementedError
+
+    # Don't complain if non-runnable code isn't run:
+    if 0:
+    if __name__ == .__main__.:
+
+ignore_errors = True

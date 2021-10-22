@@ -14,7 +14,7 @@ jobs:
       with:
          access_key_id: ${{ secrets.DHD_ACCESS_KEY_ID }}
          secret_access_key: ${{ secrets.DHD_SECRET_ACCESS_KEY }}
-         account_id:  ${{ secrets.APP057_ACCOUNT_ID }}
+         account_id:  ${{ secrets.DHD_ACCOUNT_ID }}
          repo: ${{ secrets. DHD_ECR_REPO_NAME }}
          region: ${{ secrets. DHD_REGION_NAME }}
          tags: ${{ env.BRANCH }}
