@@ -33,7 +33,10 @@ configure_devel: ## Delete/create virtual environment and install all requiremen
 	pre-commit install
 
 aws-login: ## Login using AWS cli on ECR to pull images
-	aws ecr get-login-password --region us-east-1 --profile aws.app057  | docker login --username AWS --password-stdin 567155466257.dkr.ecr.us-east-1.amazonaws.com 
+	aws ecr get-login-password --region us-east-2 --profile diogo  | docker login --username AWS --password-stdin 018008741390.dkr.ecr.us-east-2.amazonaws.com
+
+
+docker tag dojo-dojo:latest 018008741390.dkr.ecr.us-east-2.amazonaws.com/dojo-dojo:latest
 
 init_test: ## Runs all project test suite, recording all test converage data
 	if [ -d "coverage-reports" ]; then \

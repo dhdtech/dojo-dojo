@@ -1,4 +1,4 @@
-FROM 567155466257.dkr.ecr.us-east-1.amazonaws.com/uwsgi-nginx-flask:latest 
+FROM 018008741390.dkr.ecr.us-east-2.amazonaws.com/uwsgi-nginx-flask
 
 ENV PYTHONPATH=.
 
