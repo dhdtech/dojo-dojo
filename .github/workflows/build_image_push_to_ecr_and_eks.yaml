@@ -1,0 +1,35 @@
+name: Build and Push docker images to AWS ECR
+on:
+  push:
+    branches: [ staging, production ]
+jobs:
+  jobName:
+    name: Build Docker image and Push to AWS ECR
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set environment variables
+      run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+    - uses: actions/checkout@v2
+    - uses: kciter/aws-ecr-action@v4
+      with:
+         access_key_id: ${{ secrets.DHD_ACCESS_KEY_ID }}
+         secret_access_key: ${{ secrets.DHD_SECRET_ACCESS_KEY }}
+         account_id:  ${{ secrets.APP057_ACCOUNT_ID }}
+         repo: ${{ secrets. DHD_ECR_REPO_NAME }}
+         region: ${{ secrets. DHD_REGION_NAME }}
+         tags: ${{ env.BRANCH }}
+    - uses: ianbelcher/eks-kubectl-action@master
+      with:
+        aws_access_key_id: ${{ secrets.DHD_ACCESS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.DHD_SECRET_ACCESS_KEY }}
+        aws_region: ${{ secrets. DHD_REGION_NAME }}
+        cluster_name: ${{ secrets. DHD_CLUSTER_NAME }}
+        args: apply -f deploy/deployApplication-${{ env.BRANCH }}.yaml
+    - uses: ianbelcher/eks-kubectl-action@master
+      with:
+        aws_access_key_id: ${{ secrets.DHD_ACCESS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.DHD_SECRET_ACCESS_KEY }}
+        aws_region: ${{ secrets. DHD_REGION_NAME }}
+        cluster_name: ${{ secrets. DHD_CLUSTER_NAME }}
+        args: rollout restart deployment/${{ secrets. DHD_ECR_REPO_NAME }}-${{ env.BRANCH }} -n ${{ env.BRANCH }}
+
