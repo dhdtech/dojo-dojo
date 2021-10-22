@@ -1,9 +1,0 @@
-drm_appointment/controllers/patient_controller.py
-drm_appointment/controllers/physician_controller.py
-drm_appointment/controllers/appointment_controller.py
-drm_appointment/controllers/security_controller_.py
-drm_appointment/__main__.py
-
-drm_financial/controllers/financial_controller.py
-drm_financial/controllers/security_controller_.py
-drm_financial/__main__.py

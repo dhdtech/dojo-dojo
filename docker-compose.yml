@@ -1,99 +1,19 @@
 version: '3'
 services:
-  drm_redis:
-    container_name: drm_redis
-    image: "redis:alpine"
-    command: redis-server
-    ports:
-      - "6379:6379"
-    volumes:
-      - $PWD/data/redis-data:/var/lib/redis
-      - $PWD/data//redis.conf:/usr/local/etc/redis/redis.conf
-    environment:
-      - REDIS_REPLICATION_MODE=master
-  drm_postgres:
-    container_name: drm_postgres
-    image: postgres
-    restart: always
-    ports:
-      - '5032:5432'
-    environment:
-      POSTGRES_PASSWORD: sOmE_sEcUrE_pAsS
-    volumes:
-      - $PWD/data/pg_data:/var/lib/psotgresql/data
-      - $PWD/ddl/auto_migration.sql:/docker-entrypoint-initdb.d/init.sql
-  drm_celery:
-    container_name: drm_celery
-    build:
-      context: .
-      dockerfile: drm_celery/drm_celery.Dockerfile
-    command: celery -A tasks worker -l info -E
-    env_file: 
-      - .env
-    depends_on:
-      - drm_redis
-      - drm_postgres
-    volumes:
-      - $PWD/drm_celery:/queue
-  drm_celery_beat:
-    container_name: drm_celery_beat
-    build:
-      context: .
-      dockerfile: drm_celery/drm_celery.Dockerfile
-    ports:
-      - "5555:5555"
-    command:  ['celery', 'flower', '-A', 'tasks']
-    env_file: 
-      - .env
-    depends_on:
-      - drm_redis
-      - drm_postgres
-    volumes:
-      - $PWD/drm_celery:/queue
-  drm_appointment:
-    container_name: drm_appointment
-    env_file:
-      - .env
-    ports:
-      - '5000:8080'
-      - '20005:20005'
-    build:
-      context: .
-      dockerfile: drm_appointment/drm_appointment.Dockerfile
-    command: python -m debugpy --listen 0.0.0.0:20005 -m drm_appointment
-    image: drm_appointment
-    volumes:
-      - './:/app'
-    environment: 
-      FLASK_DEBUG: 0
-      FLASK_ENV: development
-      DB_URL: "postgresql+psycopg2://postgres:sOmE_sEcUrE_pAsS@drm_postgres:5432/postgres"
-    depends_on: 
-      - drm_redis
-      - drm_postgres
-      - drm_celery
-      - drm_celery_beat
-  drm_financial:
-    container_name: drm_financial
-    env_file:
-      - .env
-    ports:
-      - '5001:8080'
-      - '20006:20005'
-    build:
-      context: .
-      dockerfile: drm_financial/drm_financial.Dockerfile
-    command: python -m debugpy --listen 0.0.0.0:20005 -m drm_financial
-    image: drm_appointment
-    volumes:
-      - './:/app'
-    environment: 
-      FLASK_DEBUG: 0
-      FLASK_ENV: development
-      DB_URL: "postgresql+psycopg2://postgres:sOmE_sEcUrE_pAsS@drm_postgres:5432/postgres"
-    depends_on: 
-      - drm_appointment
-      - drm_redis
-      - drm_postgres
-      - drm_celery
-      - drm_celery_beat
+    lamconnect:
+      env_file:
+        - .env
+      container_name: lamconnect
+      ports:
+        - '5000:5000'
+        - '20005:20005'
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: python -m debugpy --listen 0.0.0.0:20005 -m application
+      image: lamconnect
+      volumes:
+        - './:/app'
+      environment:
+        FLASK_DEBUG: 1
+        FLASK_APP: ./main.py

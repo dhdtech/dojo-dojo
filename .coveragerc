@@ -6,13 +6,14 @@ omit =
     wsgi.py
     application.py
     */test/*
-    drm_appointment/models/*
-    drm_financial//models/*
-    drm_appointment/__init__.py
-    drm_financial/__init__.py
-    drm_appointment/controllers/security_controller_.py
-    drm_financial/controllers/security_controller_.py
-
+    main.py
+source =
+    .
+    app
+    app/lamconnect
+    app/secret_manager
+    app/snowflake
+    
 [report]
 precision = 3
 fail_under = 80

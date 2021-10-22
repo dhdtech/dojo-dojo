@@ -1,0 +1,94 @@
+<mxfile host="65bd71144e">
+    <diagram id="x0BtyvZVrxKZbPXkuf4U" name="Page-1">
+        <mxGraphModel dx="3108" dy="840" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="29" value="" style="rounded=1;arcSize=9;align=left;spacingLeft=5;strokeColor=#4C9AFF;html=1;strokeWidth=2;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry width="849" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github" parent="1" vertex="1">
+                    <mxGeometry x="10" y="10" width="130" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.986;entryY=0.472;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#0050ef;strokeColor=#001DBC;strokeWidth=4;" parent="1" source="3" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="796" y="182"/>
+                            <mxPoint x="460" y="182"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="start new&lt;br style=&quot;font-size: 16px;&quot;&gt;hotfix branch" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FFFFFF;fontSize=16;fontStyle=1" parent="24" vertex="1" connectable="0">
+                    <mxGeometry x="-0.0045" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#e51400;strokeColor=#B20000;strokeWidth=4;" parent="1" source="4" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Pull Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FFFFFF;fontSize=16;fontStyle=1" parent="21" vertex="1" connectable="0">
+                    <mxGeometry x="0.0064" y="25" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.472;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;strokeWidth=4;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" source="4" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="start new &lt;br style=&quot;font-size: 16px;&quot;&gt;release branch" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FFFFFF;fontSize=16;fontStyle=1" parent="22" vertex="1" connectable="0">
+                    <mxGeometry x="-0.0951" y="-17" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.514;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.444;exitY=0.014;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#e51400;strokeColor=#B20000;strokeWidth=4;" parent="1" source="4" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Pull Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FFFFFF;fontSize=16;fontStyle=1" parent="33" vertex="1" connectable="0">
+                    <mxGeometry x="0.0107" y="26" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0;entryY=0.528;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#e51400;strokeColor=#B20000;strokeWidth=3;" parent="1" source="23" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="346" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="425" y="294"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="Pull Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontStyle=1" vertex="1" connectable="0" parent="25">
+                    <mxGeometry x="0.072" y="4" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="Lamconnect - GitFlow" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="55" width="710" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="production" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=14;image=img/lib/azure2/general/Branch.svg;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="760" y="256" width="72" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="release/branch-desired-name" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=14;image=img/lib/azure2/general/Branch.svg;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="389" y="426" width="72" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="staging" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=14;image=img/lib/azure2/general/Branch.svg;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="16" y="256" width="72" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;exitX=-0.028;exitY=0.514;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=4;fillColor=#e51400;strokeColor=#B20000;" edge="1" parent="1" source="23" target="17">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="387" y="192"/>
+                            <mxPoint x="52" y="192"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="54" value="Pull Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontStyle=1" vertex="1" connectable="0" parent="53">
+                    <mxGeometry x="-0.2864" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="hotfix/branch-desired-name" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=14;image=img/lib/azure2/general/Branch.svg;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="389" y="182" width="72" height="72" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

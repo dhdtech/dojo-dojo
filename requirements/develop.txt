@@ -1,5 +1,6 @@
 pre-commit
 fakeredis
+flake8
 pytest
 coverage
 pytest-cov
@@ -9,5 +10,4 @@ pytest-randomly
 pytest-pythonpath
 pytest-xdist
 pytest-xdist[psutil]
-Flask-Testing==0.8.0
 requests-mock
